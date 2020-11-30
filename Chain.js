@@ -3,15 +3,17 @@ class Chain{
         var options = {
             bodyA: bodyA,
             pointB: pointB,
-            stiffness: 0.1,
+            stiffness: 0.004,
             length: 10
         }
         this.pointB = pointB;
+        this.chain = Matter.Constraint.create(options);
+        World.add(world,this.chain);
     }
 
     display(){
-        if(this.Chain.bodyA) {
-            var pointA = this.Chain.bodyA.position;
+        if(this.chain.bodyA) {
+            var pointA = this.chain.bodyA.position;
             var pointB = this.pointB;
             push();
             strokeWeight(4);
@@ -21,7 +23,7 @@ class Chain{
     }
 
     fly() {
-        this.string.bodyA = null;
+        this.chain.bodyA = null;
     }
     
 }
