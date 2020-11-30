@@ -56,6 +56,8 @@ function draw() {
   mango5.display();
 
   stone.display();
+	
+  string.display();
 
   drawSprites();
 }
