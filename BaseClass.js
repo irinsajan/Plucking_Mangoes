@@ -1,7 +1,7 @@
 class BaseClass{
     constructor(x, y, width, height, angle) {
         var options = {
-            isStatic:true,
+            isStatic:false,
             'restitution':0.8,
             'friction':1.0
         }
